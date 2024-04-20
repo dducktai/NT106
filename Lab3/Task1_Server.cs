@@ -28,6 +28,8 @@ namespace Lab3
             try
             {
                 udpClient = new UdpClient(int.Parse(txtPort.Text));
+                MessageBox.Show("Server bắt đầu lắng nghe!", "Thông báo", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (true)
                 {
                     IPEndPoint RemoteIpEndPoint = new IPEndPoint(IPAddress.Any, 0);
@@ -43,8 +45,8 @@ namespace Lab3
                 MessageBox.Show(ex.Message);
             }
             finally
-            { 
-                    udpClient.Close(); // Đóng UdpClient sau khi không còn cần thiết
+            {
+                udpClient.Close(); // Đóng UdpClient sau khi không còn cần thiết
             }
         }
 
@@ -63,6 +65,17 @@ namespace Lab3
         {
             Thread thdUDPServer = new Thread(new ThreadStart(serverThread));
             thdUDPServer.Start();
+        }
+
+        private void Task1_Server_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            Environment.Exit(0);
+        }
+
+        private void lwMessage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

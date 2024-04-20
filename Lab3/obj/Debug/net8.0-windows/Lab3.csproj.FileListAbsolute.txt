@@ -16,3 +16,4 @@ D:\UIT\Semester_4\Lập trình Mạng\Lab\Lab3\obj\Debug\net8.0-windows\refint\L
 D:\UIT\Semester_4\Lập trình Mạng\Lab\Lab3\obj\Debug\net8.0-windows\Lab3.pdb
 D:\UIT\Semester_4\Lập trình Mạng\Lab\Lab3\obj\Debug\net8.0-windows\Lab3.genruntimeconfig.cache
 D:\UIT\Semester_4\Lập trình Mạng\Lab\Lab3\obj\Debug\net8.0-windows\ref\Lab3.dll
+D:\UIT\Semester_4\Lập trình Mạng\Lab\Lab3\obj\Debug\net8.0-windows\Lab3.Task2.resources

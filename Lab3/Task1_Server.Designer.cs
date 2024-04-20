@@ -67,6 +67,8 @@
             lwMessage.Size = new Size(699, 285);
             lwMessage.TabIndex = 12;
             lwMessage.UseCompatibleStateImageBehavior = false;
+            lwMessage.View = View.List;
+            lwMessage.SelectedIndexChanged += lwMessage_SelectedIndexChanged;
             // 
             // Task1_Server
             // 
@@ -80,6 +82,7 @@
             Name = "Task1_Server";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Task1_Server";
+            FormClosing += Task1_Server_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }
