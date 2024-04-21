@@ -30,11 +30,12 @@
         {
             btnClient = new Button();
             btnServer = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnClient
             // 
-            btnClient.Location = new Point(43, 73);
+            btnClient.Location = new Point(43, 99);
             btnClient.Name = "btnClient";
             btnClient.Size = new Size(210, 51);
             btnClient.TabIndex = 0;
@@ -44,7 +45,7 @@
             // 
             // btnServer
             // 
-            btnServer.Location = new Point(315, 73);
+            btnServer.Location = new Point(315, 99);
             btnServer.Name = "btnServer";
             btnServer.Size = new Size(210, 51);
             btnServer.TabIndex = 1;
@@ -52,22 +53,35 @@
             btnServer.UseVisualStyleBackColor = true;
             btnServer.Click += btnServer_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(214, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(143, 54);
+            label1.TabIndex = 3;
+            label1.Text = "Task 1";
+            // 
             // Task1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(578, 181);
+            Controls.Add(label1);
             Controls.Add(btnServer);
             Controls.Add(btnClient);
             Name = "Task1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Task1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button btnClient;
         private Button btnServer;
+        private Label label1;
     }
 }

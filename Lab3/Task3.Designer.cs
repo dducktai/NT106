@@ -1,6 +1,6 @@
 ﻿namespace Lab3
 {
-    partial class Task2
+    partial class Task3
     {
         /// <summary>
         /// Required designer variable.
@@ -28,59 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listViewCommand = new ListView();
-            btnListen = new Button();
+            btnServer = new Button();
+            button1 = new Button();
             label1 = new Label();
             SuspendLayout();
             // 
-            // listViewCommand
+            // btnServer
             // 
-            listViewCommand.Location = new Point(26, 95);
-            listViewCommand.Name = "listViewCommand";
-            listViewCommand.Size = new Size(742, 332);
-            listViewCommand.TabIndex = 0;
-            listViewCommand.UseCompatibleStateImageBehavior = false;
-            listViewCommand.View = View.List;
+            btnServer.Location = new Point(108, 116);
+            btnServer.Name = "btnServer";
+            btnServer.Size = new Size(318, 43);
+            btnServer.TabIndex = 0;
+            btnServer.Text = "Open TCP server";
+            btnServer.UseVisualStyleBackColor = true;
             // 
-            // btnListen
+            // button1
             // 
-            btnListen.Location = new Point(617, 47);
-            btnListen.Name = "btnListen";
-            btnListen.Size = new Size(153, 39);
-            btnListen.TabIndex = 1;
-            btnListen.Text = "Listen";
-            btnListen.UseVisualStyleBackColor = true;
-            btnListen.Click += btnListen_Click;
+            button1.Location = new Point(108, 175);
+            button1.Name = "button1";
+            button1.Size = new Size(318, 43);
+            button1.TabIndex = 1;
+            button1.Text = "Open new TCP client";
+            button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(317, 18);
+            label1.Location = new Point(197, 26);
             label1.Name = "label1";
             label1.Size = new Size(148, 54);
-            label1.TabIndex = 3;
-            label1.Text = "Task 2";
-            label1.Click += label1_Click;
+            label1.TabIndex = 2;
+            label1.Text = "Task 3";
             // 
-            // Task2
+            // Task3
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(531, 245);
             Controls.Add(label1);
-            Controls.Add(btnListen);
-            Controls.Add(listViewCommand);
-            Name = "Task2";
-            Text = "Task2";
+            Controls.Add(button1);
+            Controls.Add(btnServer);
+            Name = "Task3";
+            Text = "Task3";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ListView listViewCommand;
-        private Button btnListen;
+        private Button btnServer;
+        private Button button1;
         private Label label1;
     }
 }

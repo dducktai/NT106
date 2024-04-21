@@ -35,8 +35,7 @@ namespace Lab3
                     IPEndPoint RemoteIpEndPoint = new IPEndPoint(IPAddress.Any, 0);
                     Byte[] receiveBytes = udpClient.Receive(ref RemoteIpEndPoint);
                     string returnData = Encoding.ASCII.GetString(receiveBytes);
-                    string mess = RemoteIpEndPoint.Address.ToString() + ": " +
-                        returnData.ToString();
+                    string mess = RemoteIpEndPoint.Address.ToString() + ": " + returnData.ToString();
                     InfoMessage(mess);
                 }
             }
@@ -46,7 +45,7 @@ namespace Lab3
             }
             finally
             {
-                udpClient.Close(); // Đóng UdpClient sau khi không còn cần thiết
+                udpClient.Close(); 
             }
         }
 
