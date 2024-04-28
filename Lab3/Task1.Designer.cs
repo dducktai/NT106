@@ -74,6 +74,7 @@
             Name = "Task1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Task1";
+            FormClosed += Task1_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

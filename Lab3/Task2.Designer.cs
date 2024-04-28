@@ -41,6 +41,7 @@
             listViewCommand.TabIndex = 0;
             listViewCommand.UseCompatibleStateImageBehavior = false;
             listViewCommand.View = View.List;
+            listViewCommand.SelectedIndexChanged += listViewCommand_SelectedIndexChanged;
             // 
             // btnListen
             // 
@@ -73,6 +74,7 @@
             Controls.Add(listViewCommand);
             Name = "Task2";
             Text = "Task2";
+            FormClosed += Task2_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -19,6 +19,9 @@
     <Compile Update="Task3.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Task3_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Task3_Server.cs">
       <SubType>Form</SubType>
     </Compile>

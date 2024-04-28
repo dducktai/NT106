@@ -40,6 +40,7 @@
             btnListen.TabIndex = 3;
             btnListen.Text = "Listen";
             btnListen.UseVisualStyleBackColor = true;
+            btnListen.Click += btnListen_Click;
             // 
             // listViewCommand
             // 
@@ -49,6 +50,7 @@
             listViewCommand.TabIndex = 2;
             listViewCommand.UseCompatibleStateImageBehavior = false;
             listViewCommand.View = View.List;
+            listViewCommand.SelectedIndexChanged += listViewCommand_SelectedIndexChanged;
             // 
             // Task3_Server
             // 

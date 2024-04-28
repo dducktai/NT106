@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UIT\\Semester_4\\Lập trình Mạng\\Lab\\NT106\\Lab3\\Lab3.csproj": {}
+    "C:\\MyData\\UIT\\Semester_4\\Lập trình Mạng\\Lab\\NT106\\Lab3\\Lab3.csproj": {}
   },
   "projects": {
-    "D:\\UIT\\Semester_4\\Lập trình Mạng\\Lab\\NT106\\Lab3\\Lab3.csproj": {
+    "C:\\MyData\\UIT\\Semester_4\\Lập trình Mạng\\Lab\\NT106\\Lab3\\Lab3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UIT\\Semester_4\\Lập trình Mạng\\Lab\\NT106\\Lab3\\Lab3.csproj",
+        "projectUniqueName": "C:\\MyData\\UIT\\Semester_4\\Lập trình Mạng\\Lab\\NT106\\Lab3\\Lab3.csproj",
         "projectName": "Lab3",
-        "projectPath": "D:\\UIT\\Semester_4\\Lập trình Mạng\\Lab\\NT106\\Lab3\\Lab3.csproj",
+        "projectPath": "C:\\MyData\\UIT\\Semester_4\\Lập trình Mạng\\Lab\\NT106\\Lab3\\Lab3.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\UIT\\Semester_4\\Lập trình Mạng\\Lab\\NT106\\Lab3\\obj\\",
+        "outputPath": "C:\\MyData\\UIT\\Semester_4\\Lập trình Mạng\\Lab\\NT106\\Lab3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -41,6 +41,7 @@
             btnServer.TabIndex = 0;
             btnServer.Text = "Open TCP server";
             btnServer.UseVisualStyleBackColor = true;
+            btnServer.Click += btnServer_Click;
             // 
             // button1
             // 
@@ -50,6 +51,7 @@
             button1.TabIndex = 1;
             button1.Text = "Open new TCP client";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 

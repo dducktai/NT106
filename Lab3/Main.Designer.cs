@@ -40,6 +40,7 @@
             btnTask1.Name = "btnTask1";
             btnTask1.Size = new Size(247, 44);
             btnTask1.TabIndex = 0;
+            btnTask1.TabStop = false;
             btnTask1.Text = "Task 1";
             btnTask1.UseVisualStyleBackColor = true;
             btnTask1.Click += btnTask1_Click;
@@ -50,6 +51,7 @@
             btnTask2.Name = "btnTask2";
             btnTask2.Size = new Size(247, 44);
             btnTask2.TabIndex = 1;
+            btnTask2.TabStop = false;
             btnTask2.Text = "Task 2";
             btnTask2.UseVisualStyleBackColor = true;
             btnTask2.Click += btnTask2_Click;
@@ -60,6 +62,7 @@
             btnTask3.Name = "btnTask3";
             btnTask3.Size = new Size(247, 44);
             btnTask3.TabIndex = 2;
+            btnTask3.TabStop = false;
             btnTask3.Text = "Task 3";
             btnTask3.UseVisualStyleBackColor = true;
             btnTask3.Click += btnTask3_Click;
@@ -70,6 +73,7 @@
             btnTask4.Name = "btnTask4";
             btnTask4.Size = new Size(247, 44);
             btnTask4.TabIndex = 3;
+            btnTask4.TabStop = false;
             btnTask4.Text = "Task 4";
             btnTask4.UseVisualStyleBackColor = true;
             // 
@@ -83,6 +87,7 @@
             Controls.Add(btnTask2);
             Controls.Add(btnTask1);
             Name = "Main";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Main";
             ResumeLayout(false);
         }

@@ -28,6 +28,7 @@ namespace Lab3
             severthread.Start();
         }
 
+        Socket listenerSocket;
         private void StartThread()
         {
             MessageBox.Show("Server bắt đầu lắng nghe!", "Thông báo",
@@ -37,7 +38,7 @@ namespace Lab3
             byte[] recv = new byte[1];
             Socket clientSocket;
 
-            Socket listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ipepSV = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080);
             listenerSocket.Bind(ipepSV);
             listenerSocket.Listen(-1);
@@ -62,6 +63,18 @@ namespace Lab3
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void listViewCommand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Task2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            listenerSocket.Shutdown(SocketShutdown.Both);
+            listenerSocket.Close();
+            listViewCommand.Dispose();
         }
     }
 }

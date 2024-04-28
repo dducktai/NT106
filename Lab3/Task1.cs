@@ -7,16 +7,26 @@ namespace Lab3
             InitializeComponent();
         }
 
+        Task1_Client client;
+        Task1_Server server;
+
         private void btnClient_Click(object sender, EventArgs e)
         {
-            Task1_Client client = new Task1_Client();
+            client = new Task1_Client();
             client.Show();
         }
 
         private void btnServer_Click(object sender, EventArgs e)
         {
-            Task1_Server server = new Task1_Server();
+            server = new Task1_Server();
             server.Show();
+        }
+
+        private void Task1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            client.Dispose();
+            server.Dispose();
+
         }
     }
 }

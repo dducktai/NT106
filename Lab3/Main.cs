@@ -21,21 +21,18 @@ namespace Lab3
         {
             Task1 task1 = new Task1();
             task1.Show();
-            this.Hide();
         }
 
         private void btnTask2_Click(object sender, EventArgs e)
         {
             Task2 task2 = new Task2();
             task2.Show();
-            this.Hide();
         }
 
         private void btnTask3_Click(object sender, EventArgs e)
         {
             Task3 task3 = new Task3();
             task3.Show();
-            this.Hide();
         }
     }
 }

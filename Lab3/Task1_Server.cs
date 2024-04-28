@@ -22,9 +22,9 @@ namespace Lab3
 
         private delegate void InfoMessageDel(String info);
 
+        UdpClient udpClient;
         public void serverThread()
         {
-            UdpClient udpClient = null;
             try
             {
                 udpClient = new UdpClient(int.Parse(txtPort.Text));
