@@ -101,6 +101,7 @@
             Name = "Task1_Client";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Task1_Client";
+            FormClosed += Task1_Client_FormClosed;
             Load += Task1_Client_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -41,17 +41,19 @@ namespace Lab3
 
             return true;
         }
-            private void btnSend_Click(object sender, EventArgs e)
+
+        private UdpClient udpClient;
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            if (IsValidData())
             {
-            if(IsValidData())
-            {
-                UdpClient udpClient = new UdpClient();
+                udpClient = new UdpClient();
                 udpClient.Connect(txtIP.Text, int.Parse(txtPort.Text));
                 Byte[] senddata = Encoding.UTF8.GetBytes(txtMessage.Text);
                 udpClient.Send(senddata, senddata.Length);
                 txtMessage.Text = "";
                 udpClient.Close();
-            }            
+            }
         }
 
         private void Task1_Client_Load(object sender, EventArgs e)
@@ -62,6 +64,14 @@ namespace Lab3
         private void txtPort_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Task1_Client_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (udpClient != null)
+            {
+                udpClient.Close();
+            }
         }
     }
 }

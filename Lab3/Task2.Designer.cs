@@ -95,6 +95,7 @@
             Controls.Add(btnListen);
             Controls.Add(listViewCommand);
             Name = "Task2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Task2";
             FormClosed += Task2_FormClosed;
             ResumeLayout(false);

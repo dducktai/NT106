@@ -31,8 +31,9 @@ namespace Lab3
         Socket listenerSocket;
         private void StartThread()
         {
-            MessageBox.Show("Server bắt đầu lắng nghe!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            listViewCommand.Items.Add(new ListViewItem("Server bắt đầu lắng nghe!"));
+            /*MessageBox.Show("Server bắt đầu lắng nghe!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);*/
             listViewCommand.Items.Add(new ListViewItem("Waiting for connection"));
             int bytesRecv = 0;
             byte[] recv = new byte[1];

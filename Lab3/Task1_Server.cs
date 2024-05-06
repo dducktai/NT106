@@ -32,14 +32,15 @@ namespace Lab3
 
         private delegate void InfoMessageDel(String info);
 
-        UdpClient udpClient;
+        private UdpClient udpClient;
         public void serverThread()
         {
             if (IsValidData())
             {
                 udpClient = new UdpClient(int.Parse(txtPort.Text));
-                MessageBox.Show("Server bắt đầu lắng nghe!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lwMessage.Items.Add(new ListViewItem("Server bắt đầu lắng nghe!"));
+                /*MessageBox.Show("Server bắt đầu lắng nghe!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);*/
                 while (true)
                 {
                     IPEndPoint RemoteIpEndPoint = new IPEndPoint(IPAddress.Any, 0);
@@ -71,12 +72,10 @@ namespace Lab3
 
         private void Task1_Server_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-            if (thdUDPServer != null && thdUDPServer.IsAlive)
-                thdUDPServer.Abort();
-
             if (udpClient != null)
+            {
                 udpClient.Close();
+            }
         }
 
         private void lwMessage_SelectedIndexChanged(object sender, EventArgs e)
