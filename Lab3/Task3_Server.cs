@@ -20,7 +20,6 @@ namespace Lab3
         }
 
         private Socket listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        private Socket clientSocket;
 
         private void btnListen_Click(object sender, EventArgs e)
         {
@@ -34,54 +33,34 @@ namespace Lab3
         private void StartThread()
         {
             listViewCommand.Items.Add("Server running on 127.0.0.1:8080");
-            byte[] recv = new byte[1024];
-
-            try
+            int bytesReceived = 0;
+            byte[] recv = new byte[1];
+            Socket clientSocket;
+            IPEndPoint ipepServer = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080);
+            //Gan socket lang nghe toi dia chi IP cua may va port 8080
+            listenerSocket.Bind(ipepServer);
+            //bat dau lang nghe.Socket.Listening(int backlog) voi backlog la do dai toi da cua hang doi cac ket noi dang cho xu ly
+            listenerSocket.Listen(-1);
+            //Dong y ket noi
+            clientSocket = listenerSocket.Accept();
+            //Nhan du lieu
+            listViewCommand.Items.Add(new ListViewItem("New client connected!"));
+            while (clientSocket.Connected)
             {
-                listenerSocket.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080));
-                listenerSocket.Listen(1); // Chỉ chấp nhận một kết nối
-
-                clientSocket = listenerSocket.Accept();
-                listViewCommand.Items.Add("New client connected!");
-
-                NetworkStream ns = new NetworkStream(clientSocket);
-                byte[] data = Encoding.ASCII.GetBytes("Hello client\n");
-                ns.Write(data, 0, data.Length);
-
-                while (clientSocket.Connected)
+                string text = "";
+                do
                 {
-                    int bytesReceived = ns.Read(recv, 0, recv.Length);
-                    string receivedText = Encoding.ASCII.GetString(recv, 0, bytesReceived);
-                    listViewCommand.Items.Add(receivedText);
-
-                    if (receivedText.Trim().ToLower() == "quit")
-                    {
-                        listViewCommand.Items.Add("Client requested to close connection.");
-                        break;
-                    }
+                    bytesReceived = clientSocket.Receive(recv);
+                    text += Encoding.ASCII.GetString(recv);
                 }
+                while (text[text.Length - 1] != '\n');
+                listViewCommand.Items.Add(new ListViewItem(text));
             }
-            catch (Exception ex)
-            {
-                listViewCommand.Items.Add("Error: " + ex.Message);
-            }
-            finally
-            {
-                if (clientSocket != null && clientSocket.Connected)
-                {
-                    clientSocket.Shutdown(SocketShutdown.Both);
-                    clientSocket.Close();
-                }
-                listenerSocket.Close();
-            }
+            listenerSocket.Close();
         }
 
         private void Task3_Server_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (listenerSocket.Connected)
-            {
-                listenerSocket.Shutdown(SocketShutdown.Both);
-            }
             if (listenerSocket != null)
             {
                 listenerSocket.Close();

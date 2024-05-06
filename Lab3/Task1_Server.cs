@@ -32,8 +32,9 @@ namespace Lab3
 
         private delegate void InfoMessageDel(String info);
 
+
         private UdpClient udpClient;
-        public void serverThread()
+        private void serverThread()
         {
             if (IsValidData())
             {
@@ -49,10 +50,11 @@ namespace Lab3
                     string mess = RemoteIpEndPoint.Address.ToString() + ": " + returnData.ToString();
                     InfoMessage(mess);
                 }
+                udpClient.Close();
             }
         }
 
-        public void InfoMessage(String info)
+        private void InfoMessage(String info)
         {
             if (lwMessage.InvokeRequired)
             {
@@ -63,7 +65,7 @@ namespace Lab3
             lwMessage.Items.Add(info);
         }
 
-        Thread thdUDPServer;
+        private Thread thdUDPServer;
         private void btnListen_Click(object sender, EventArgs e)
         {
             thdUDPServer = new Thread(new ThreadStart(serverThread));
@@ -72,10 +74,10 @@ namespace Lab3
 
         private void Task1_Server_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (udpClient != null)
+            /*if (udpClient != null)
             {
                 udpClient.Close();
-            }
+            }*/
         }
 
         private void lwMessage_SelectedIndexChanged(object sender, EventArgs e)
