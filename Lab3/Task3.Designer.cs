@@ -72,6 +72,7 @@
             Controls.Add(button1);
             Controls.Add(btnServer);
             Name = "Task3";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Task3";
             ResumeLayout(false);
             PerformLayout();

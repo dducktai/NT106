@@ -23,9 +23,9 @@ namespace Lab3
 
         private void btnListen_Click(object sender, EventArgs e)
         {
-            CheckForIllegalCrossThreadCalls = false;
-            Thread severthread = new Thread(new ThreadStart(StartThread));
-            severthread.Start();
+            Thread serverThread = new Thread(new ThreadStart(StartThread));
+            serverThread.IsBackground = true;
+            serverThread.Start();
         }
 
         Socket listenerSocket;
@@ -33,7 +33,7 @@ namespace Lab3
         {
             MessageBox.Show("Server bắt đầu lắng nghe!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-            listViewCommand.Items.Add(new ListViewItem("Waiting for connetion"));
+            listViewCommand.Items.Add(new ListViewItem("Waiting for connection"));
             int bytesRecv = 0;
             byte[] recv = new byte[1];
             Socket clientSocket;
@@ -42,23 +42,34 @@ namespace Lab3
             IPEndPoint ipepSV = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080);
             listenerSocket.Bind(ipepSV);
             listenerSocket.Listen(-1);
-            clientSocket = listenerSocket.Accept();
 
-            listViewCommand.Items.Add(new ListViewItem("New client conneted"));
-
-            while (clientSocket.Connected)
+            while (true)
             {
-                string text = "";
-                do
+                clientSocket = listenerSocket.Accept();
+                listViewCommand.Items.Add(new ListViewItem("New client connected"));
+
+                while (clientSocket.Connected)
                 {
-                    bytesRecv = clientSocket.Receive(recv);
-                    text += Encoding.ASCII.GetString(recv);
+                    string text = "";
+                    do
+                    {
+                        bytesRecv = clientSocket.Receive(recv);
+                        text += Encoding.ASCII.GetString(recv);
+                    }
+                    while (text[text.Length - 1] != '\n');
+
+                    if (bytesRecv == 0) // Kiểm tra nếu kết nối đã đóng
+                    {
+                        listViewCommand.Items.Add(new ListViewItem("Client disconnected"));
+                        break; // Dừng vòng lặp khi kết nối đã đóng
+                    }
+
+                    listViewCommand.Items.Add(new ListViewItem("You said: " + text));
                 }
-                while (text[text.Length - 1] != '\n');
-                listViewCommand.Items.Add(new ListViewItem("You said: " + text));
+                clientSocket.Close();
             }
-            listenerSocket.Close();
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -72,9 +83,11 @@ namespace Lab3
 
         private void Task2_FormClosed(object sender, FormClosedEventArgs e)
         {
-            listenerSocket.Shutdown(SocketShutdown.Both);
-            listenerSocket.Close();
-            listViewCommand.Dispose();
+            if (listenerSocket != null && listenerSocket.Connected)
+            {
+                listenerSocket.Shutdown(SocketShutdown.Both);
+                listenerSocket.Close();
+            }
         }
     }
 }

@@ -90,3 +90,6 @@ C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab3\obj\Debug\net8.0-win
 C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab3\obj\Debug\net8.0-windows\Lab3.Task4.resources
 C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab3\obj\Debug\net8.0-windows\Lab3.Task4_Server.resources
 C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab3\obj\Debug\net8.0-windows\Lab3.Task4_Client.resources
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab3\obj\Debug\net8.0-windows\Lab3.Task4.resources
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab3\obj\Debug\net8.0-windows\Lab3.Task4_Client.resources
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab3\obj\Debug\net8.0-windows\Lab3.Task4_Server.resources

@@ -23,9 +23,11 @@ namespace Lab3
         NetworkStream networkStream;
         private void btnSend_Click(object sender, EventArgs e)
         {
-
-            Byte[] data = Encoding.UTF8.GetBytes("Hello Server \r\n");
-            networkStream.Write(data, 0, data.Length);
+            if (networkStream != null && networkStream.CanWrite)
+            {
+                Byte[] data = Encoding.UTF8.GetBytes("Hello Server \r\n");
+                networkStream.Write(data, 0, data.Length);
+            }
         }
 
         private void Task3_Client_Load(object sender, EventArgs e)
@@ -40,10 +42,17 @@ namespace Lab3
 
         private void Task3_Client_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Byte[] data = System.Text.Encoding.ASCII.GetBytes("Quit\n");
-            networkStream.Write(data, 0, data.Length);
-            networkStream.Close();
-            tcpClient.Close();
+            if (networkStream != null)
+            {
+                Byte[] data = Encoding.ASCII.GetBytes("Quit\n");
+                networkStream.Write(data, 0, data.Length);
+                networkStream.Close();
+            }
+
+            if (tcpClient != null)
+            {
+                tcpClient.Close();
+            }
         }
     }
 }

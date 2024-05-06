@@ -20,32 +20,34 @@ namespace Lab3
             InitializeComponent();
         }
 
+        private bool IsValidData()
+        {
+            if (string.IsNullOrEmpty(txtPort.Text))
+            {
+                MessageBox.Show("Vui lòng nhập Port!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
         private delegate void InfoMessageDel(String info);
 
         UdpClient udpClient;
         public void serverThread()
         {
-            try
+            if (IsValidData())
             {
                 udpClient = new UdpClient(int.Parse(txtPort.Text));
-                MessageBox.Show("Server bắt đầu lắng nghe!", "Thông báo", 
+                MessageBox.Show("Server bắt đầu lắng nghe!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 while (true)
                 {
                     IPEndPoint RemoteIpEndPoint = new IPEndPoint(IPAddress.Any, 0);
                     Byte[] receiveBytes = udpClient.Receive(ref RemoteIpEndPoint);
-                    string returnData = Encoding.ASCII.GetString(receiveBytes);
+                    string returnData = Encoding.UTF8.GetString(receiveBytes);
                     string mess = RemoteIpEndPoint.Address.ToString() + ": " + returnData.ToString();
                     InfoMessage(mess);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                udpClient.Close(); 
             }
         }
 
@@ -60,16 +62,21 @@ namespace Lab3
             lwMessage.Items.Add(info);
         }
 
+        Thread thdUDPServer;
         private void btnListen_Click(object sender, EventArgs e)
         {
-            Thread thdUDPServer = new Thread(new ThreadStart(serverThread));
+            thdUDPServer = new Thread(new ThreadStart(serverThread));
             thdUDPServer.Start();
         }
 
         private void Task1_Server_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            Environment.Exit(0);
+            if (thdUDPServer != null && thdUDPServer.IsAlive)
+                thdUDPServer.Abort();
+
+            if (udpClient != null)
+                udpClient.Close();
         }
 
         private void lwMessage_SelectedIndexChanged(object sender, EventArgs e)

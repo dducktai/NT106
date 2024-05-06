@@ -24,8 +24,6 @@ namespace Lab3
 
         private void Task1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            client.Dispose();
-            server.Dispose();
 
         }
     }

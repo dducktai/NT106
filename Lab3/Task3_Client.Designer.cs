@@ -48,6 +48,7 @@
             ClientSize = new Size(505, 125);
             Controls.Add(btnSend);
             Name = "Task3_Client";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Task3_Client";
             FormClosed += Task3_Client_FormClosed;
             Load += Task3_Client_Load;

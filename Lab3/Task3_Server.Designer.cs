@@ -34,7 +34,7 @@
             // 
             // btnListen
             // 
-            btnListen.Location = new Point(619, 35);
+            btnListen.Location = new Point(617, 38);
             btnListen.Name = "btnListen";
             btnListen.Size = new Size(153, 39);
             btnListen.TabIndex = 3;
@@ -50,7 +50,6 @@
             listViewCommand.TabIndex = 2;
             listViewCommand.UseCompatibleStateImageBehavior = false;
             listViewCommand.View = View.List;
-            listViewCommand.SelectedIndexChanged += listViewCommand_SelectedIndexChanged;
             // 
             // Task3_Server
             // 
@@ -60,7 +59,9 @@
             Controls.Add(btnListen);
             Controls.Add(listViewCommand);
             Name = "Task3_Server";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Task3_Server";
+            FormClosed += Task3_Server_FormClosed;
             ResumeLayout(false);
         }
 
