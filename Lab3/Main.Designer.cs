@@ -36,9 +36,10 @@
             // 
             // btnTask1
             // 
-            btnTask1.Location = new Point(127, 40);
+            btnTask1.Location = new Point(165, 51);
+            btnTask1.Margin = new Padding(4, 4, 4, 4);
             btnTask1.Name = "btnTask1";
-            btnTask1.Size = new Size(247, 44);
+            btnTask1.Size = new Size(321, 56);
             btnTask1.TabIndex = 0;
             btnTask1.TabStop = false;
             btnTask1.Text = "Task 1";
@@ -47,9 +48,10 @@
             // 
             // btnTask2
             // 
-            btnTask2.Location = new Point(127, 109);
+            btnTask2.Location = new Point(165, 140);
+            btnTask2.Margin = new Padding(4, 4, 4, 4);
             btnTask2.Name = "btnTask2";
-            btnTask2.Size = new Size(247, 44);
+            btnTask2.Size = new Size(321, 56);
             btnTask2.TabIndex = 1;
             btnTask2.TabStop = false;
             btnTask2.Text = "Task 2";
@@ -58,9 +60,10 @@
             // 
             // btnTask3
             // 
-            btnTask3.Location = new Point(127, 180);
+            btnTask3.Location = new Point(165, 230);
+            btnTask3.Margin = new Padding(4, 4, 4, 4);
             btnTask3.Name = "btnTask3";
-            btnTask3.Size = new Size(247, 44);
+            btnTask3.Size = new Size(321, 56);
             btnTask3.TabIndex = 2;
             btnTask3.TabStop = false;
             btnTask3.Text = "Task 3";
@@ -69,23 +72,26 @@
             // 
             // btnTask4
             // 
-            btnTask4.Location = new Point(127, 252);
+            btnTask4.Location = new Point(165, 323);
+            btnTask4.Margin = new Padding(4, 4, 4, 4);
             btnTask4.Name = "btnTask4";
-            btnTask4.Size = new Size(247, 44);
+            btnTask4.Size = new Size(321, 56);
             btnTask4.TabIndex = 3;
             btnTask4.TabStop = false;
             btnTask4.Text = "Task 4";
             btnTask4.UseVisualStyleBackColor = true;
+            btnTask4.Click += btnTask4_Click;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(506, 333);
+            ClientSize = new Size(658, 426);
             Controls.Add(btnTask4);
             Controls.Add(btnTask3);
             Controls.Add(btnTask2);
             Controls.Add(btnTask1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Main";

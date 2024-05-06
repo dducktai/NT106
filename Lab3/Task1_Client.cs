@@ -27,5 +27,10 @@ namespace Lab3
             txtMessage.Text = "";
             udpClient.Close();
         }
+
+        private void Task1_Client_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
