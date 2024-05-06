@@ -33,39 +33,57 @@ namespace Lab3
 
         private void StartThread()
         {
-
             listViewCommand.Items.Add("Server running on 127.0.0.1:8080");
-            int bytesReceived = 0;
-            byte[] recv = new byte[1];
-            IPEndPoint ipepServer = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080);
-            listenerSocket.Bind(ipepServer);
-            listenerSocket.Listen(1); // Chỉ chấp nhận một kết nối
+            byte[] recv = new byte[1024];
 
-            clientSocket = listenerSocket.Accept();
-            listViewCommand.Items.Add("New client connected!");
-
-            while (clientSocket.Connected)
+            try
             {
-                string text = "";
-                do
-                {
-                    bytesReceived = clientSocket.Receive(recv);
-                    text += Encoding.ASCII.GetString(recv);
-                }
-                while (text[text.Length - 1] != '\n');
-                listViewCommand.Items.Add(text);
-            }
+                listenerSocket.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080));
+                listenerSocket.Listen(1); // Chỉ chấp nhận một kết nối
 
-            listViewCommand.Items.Add("Client left");
-            clientSocket.Close();
-            listenerSocket.Close();
+                clientSocket = listenerSocket.Accept();
+                listViewCommand.Items.Add("New client connected!");
+
+                NetworkStream ns = new NetworkStream(clientSocket);
+                byte[] data = Encoding.ASCII.GetBytes("Hello client\n");
+                ns.Write(data, 0, data.Length);
+
+                while (clientSocket.Connected)
+                {
+                    int bytesReceived = ns.Read(recv, 0, recv.Length);
+                    string receivedText = Encoding.ASCII.GetString(recv, 0, bytesReceived);
+                    listViewCommand.Items.Add(receivedText);
+
+                    if (receivedText.Trim().ToLower() == "quit")
+                    {
+                        listViewCommand.Items.Add("Client requested to close connection.");
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                listViewCommand.Items.Add("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (clientSocket != null && clientSocket.Connected)
+                {
+                    clientSocket.Shutdown(SocketShutdown.Both);
+                    clientSocket.Close();
+                }
+                listenerSocket.Close();
+            }
         }
 
         private void Task3_Server_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (listenerSocket != null && listenerSocket.Connected)
+            if (listenerSocket.Connected)
             {
                 listenerSocket.Shutdown(SocketShutdown.Both);
+            }
+            if (listenerSocket != null)
+            {
                 listenerSocket.Close();
             }
         }
