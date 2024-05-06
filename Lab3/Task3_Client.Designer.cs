@@ -33,9 +33,10 @@
             // 
             // btnSend
             // 
-            btnSend.Location = new Point(102, 52);
+            btnSend.Location = new Point(133, 67);
+            btnSend.Margin = new Padding(4, 4, 4, 4);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(292, 37);
+            btnSend.Size = new Size(380, 47);
             btnSend.TabIndex = 0;
             btnSend.Text = "Send Message";
             btnSend.UseVisualStyleBackColor = true;
@@ -43,13 +44,15 @@
             // 
             // Task3_Client
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(505, 125);
+            ClientSize = new Size(656, 160);
             Controls.Add(btnSend);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "Task3_Client";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Task3_Client";
+            FormClosing += Task3_Client_FormClosing;
             FormClosed += Task3_Client_FormClosed;
             Load += Task3_Client_Load;
             ResumeLayout(false);
