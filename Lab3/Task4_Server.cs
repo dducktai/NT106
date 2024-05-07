@@ -178,11 +178,11 @@ namespace Lab3
                 // Dừng lắng nghe kết nối mới
                 tcpListener.Stop();
 
-                // Đóng tất cả các kết nối hiện tại
-                foreach (TcpClient client in clients)
-                {
-                    client.Close();
-                }
+                //// Đóng tất cả các kết nối hiện tại
+                //foreach (TcpClient client in clients)
+                //{
+                //    client.Close();
+                //}
 
                 // Xóa danh sách client
                 clients.Clear();
@@ -193,6 +193,7 @@ namespace Lab3
                 AppendLog("Đã đóng tất cả kết nối và dừng lắng nghe!");
                 btnClose.Enabled = false;
                 btnListen.Enabled = true;
+                isServerRunning = false;
             }
             catch (Exception ex)
             {
@@ -205,6 +206,38 @@ namespace Lab3
         private void Task4_Server_Load(object sender, EventArgs e)
         {
             btnClose.Enabled = false;
+        }
+
+        private void Task4_Server_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Hiển thị hộp thoại xác nhận khi người dùng cố gắng đóng Form
+            DialogResult result;
+            if (isServerRunning == true)
+            {
+                result = MessageBox.Show("Bạn có muốn đóng máy chủ không?", "Xác nhận đóng máy chủ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            }
+            else
+            {
+                result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Xác nhận thoát chương trình", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            }
+
+            // Nếu người dùng chọn "Cancel", hủy việc đóng Form
+            if (result == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+            // Nếu người dùng chọn "OK", đóng Form và dừng server (nếu cần)
+            else if (result == DialogResult.OK)
+            {
+                if (isServerRunning == true)
+                {
+                    // Dừng server hoặc thực hiện các thao tác cần thiết trước khi đóng
+                    btnClose_Click(this, e);
+                }
+
+            }
         }
     }
 }

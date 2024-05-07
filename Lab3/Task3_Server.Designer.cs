@@ -34,9 +34,10 @@
             // 
             // btnListen
             // 
-            btnListen.Location = new Point(617, 38);
+            btnListen.Location = new Point(802, 49);
+            btnListen.Margin = new Padding(4);
             btnListen.Name = "btnListen";
-            btnListen.Size = new Size(153, 39);
+            btnListen.Size = new Size(199, 50);
             btnListen.TabIndex = 3;
             btnListen.Text = "Listen";
             btnListen.UseVisualStyleBackColor = true;
@@ -44,9 +45,10 @@
             // 
             // listViewCommand
             // 
-            listViewCommand.Location = new Point(28, 83);
+            listViewCommand.Location = new Point(36, 106);
+            listViewCommand.Margin = new Padding(4);
             listViewCommand.Name = "listViewCommand";
-            listViewCommand.Size = new Size(742, 344);
+            listViewCommand.Size = new Size(963, 439);
             listViewCommand.TabIndex = 2;
             listViewCommand.UseCompatibleStateImageBehavior = false;
             listViewCommand.View = View.List;
@@ -54,15 +56,20 @@
             // 
             // Task3_Server
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1040, 576);
             Controls.Add(btnListen);
             Controls.Add(listViewCommand);
+            Margin = new Padding(4);
             Name = "Task3_Server";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Task3_Server";
             FormClosing += Task3_Server_FormClosing;
+<<<<<<< HEAD
+=======
+            Load += Task3_Server_Load;
+>>>>>>> a06e2a7c8cdb7a504eb0d285c78da76928cb522a
             ResumeLayout(false);
         }
 

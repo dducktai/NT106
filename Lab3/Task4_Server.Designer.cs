@@ -30,6 +30,7 @@
         {
             btnListen = new Button();
             lvLog = new ListView();
+            columnHeader1 = new ColumnHeader();
             btnClose = new Button();
             SuspendLayout();
             // 
@@ -46,13 +47,19 @@
             // 
             // lvLog
             // 
+            lvLog.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
+            lvLog.HeaderStyle = ColumnHeaderStyle.None;
             lvLog.Location = new Point(36, 99);
             lvLog.Margin = new Padding(4);
             lvLog.Name = "lvLog";
             lvLog.Size = new Size(963, 439);
             lvLog.TabIndex = 6;
             lvLog.UseCompatibleStateImageBehavior = false;
-            lvLog.View = View.List;
+            lvLog.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Width = 950;
             // 
             // btnClose
             // 
@@ -75,6 +82,7 @@
             Controls.Add(lvLog);
             Name = "Task4_Server";
             Text = "Task4_Server";
+            FormClosing += Task4_Server_FormClosing;
             Load += Task4_Server_Load;
             ResumeLayout(false);
         }
@@ -84,5 +92,6 @@
         private Button btnListen;
         private ListView lvLog;
         private Button btnClose;
+        private ColumnHeader columnHeader1;
     }
 }

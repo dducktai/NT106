@@ -18,11 +18,17 @@ namespace Lab3
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
 
         private bool isListening = false;
         private Socket listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         private bool stopListening = false;
 
+=======
+        private bool isListening = false;
+        private Socket listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        private bool stopListening = false;
+>>>>>>> a06e2a7c8cdb7a504eb0d285c78da76928cb522a
         private void btnListen_Click(object sender, EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;
@@ -86,11 +92,18 @@ namespace Lab3
             }
         }
 
+<<<<<<< HEAD
         private void listViewCommand_SelectedIndexChanged(object sender, EventArgs e)
+=======
+
+
+        private void Task3_Server_FormClosed(object sender, FormClosedEventArgs e)
+>>>>>>> a06e2a7c8cdb7a504eb0d285c78da76928cb522a
         {
 
         }
 
+<<<<<<< HEAD
         private void Task3_Server_FormClosing(object sender, FormClosingEventArgs e)
         {
             stopListening = true; // Dừng tiến trình lắng nghe
@@ -98,7 +111,39 @@ namespace Lab3
             {
                 listenerSocket.Shutdown(SocketShutdown.Both);
                 listenerSocket.Close();
+=======
+        private void btnEnchat_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void Task3_Server_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result;
+
+            result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Xác nhận thoát chương trình", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+>>>>>>> a06e2a7c8cdb7a504eb0d285c78da76928cb522a
             }
+            else
+            {
+                stopListening = true; // Dừng tiến trình lắng nghe
+                if (listenerSocket != null && listenerSocket.Connected)
+                {
+                    listenerSocket.Shutdown(SocketShutdown.Both);
+                    listenerSocket.Close();
+                }
+            }
+        }
+
+
+        private void Task3_Server_Load(object sender, EventArgs e)
+        {
+            btnListen.Enabled = true;
         }
     }
 }

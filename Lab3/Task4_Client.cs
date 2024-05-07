@@ -18,6 +18,7 @@ namespace Lab3
         private StreamWriter writer;
         private Thread receiveThread;
         private string username;
+        private bool isInChat = false;
         public Task4_Client()
         {
             InitializeComponent();
@@ -38,33 +39,24 @@ namespace Lab3
                 lvMess.Items.Add(log + Environment.NewLine);
             }
         }
- 
+
         private void ReceiveMessages()
         {
 
             try
             {
-                while (true)
+                while (client.Connected)
                 {
                     // Đọc tin nhắn từ server
-                    string message = reader.ReadLine();
 
+                    string message = reader.ReadLine();
                     if (message == "SERVER_CLOSE")
                     {
-
-
                         AddMessage("Máy chủ đã đóng!");
                         btnDisconect_Click(this, EventArgs.Empty);
                         btnConnect.Enabled = false;
 
                         break;
-                    }
-                    
-                    else if (message == "SERVER_OPEN")
-                    {
-
-                        AddMessage("Máy chủ đã mở!");
-                        btnConnect.Enabled = true;
                     }
                     else
                     {
@@ -74,14 +66,15 @@ namespace Lab3
 
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                // Xử lý ngoại lệ
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Xử lý ngoại lệ mà không hiển thị thông báo lỗi cụ thể
+                MessageBox.Show("Đã rời khỏi cuộc trò chuyện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+
         }
-        private void ConnectToServer()
+        private bool ConnectToServer()
         {
             // Khởi tạo kết nối đến server
             client = new TcpClient();
@@ -97,24 +90,45 @@ namespace Lab3
 
             if (string.IsNullOrEmpty(username)) // Kiểm tra nếu không nhập username
             {
-                MessageBox.Show("Vui lòng nhập username để tham gia cuộc trò chuyện!");
-                this.Close();
+                MessageBox.Show("Vui lòng nhập username để tham gia cuộc trò chuyện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            else
+            {
+                // Gửi username lên server để đăng ký
+                writer.WriteLine(username);
+                writer.Flush();
+
+                // Khởi tạo thread để lắng nghe dữ liệu từ server
+                Thread receiveThread = new Thread(ReceiveMessages);
+                receiveThread.Start();
+                return true;
             }
 
-            // Gửi username lên server để đăng ký
-            writer.WriteLine(username);
-            writer.Flush();
 
-            // Khởi tạo thread để lắng nghe dữ liệu từ server
-            Thread receiveThread = new Thread(ReceiveMessages);
-            receiveThread.Start();
         }
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            btnConnect.Enabled = false;
-            btnDisconect.Enabled = true;
-            btnSend.Enabled = true;
-            ConnectToServer();
+            try
+            {
+                if (ConnectToServer() == true)
+                {
+                    btnConnect.Enabled = false;
+                    btnDisconect.Enabled = true;
+                    btnSend.Enabled = true;
+                    isInChat = true;
+                }
+                else
+                {
+                    btnConnect.Enabled = true;
+                }
+            }
+            catch (Exception)
+            {
+                // Xử lý ngoại lệ
+                MessageBox.Show("Máy chủ chưa mở!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
 
         private void btnDisconect_Click(object sender, EventArgs e)
@@ -138,6 +152,7 @@ namespace Lab3
                 btnConnect.Enabled = true;
                 btnSend.Enabled = false;
                 btnDisconect.Enabled = false;
+                isInChat = false;
             }
         }
 
@@ -146,13 +161,64 @@ namespace Lab3
             if (string.IsNullOrEmpty(username)) // Kiểm tra nếu chưa nhập username
             {
                 MessageBox.Show("Vui lòng nhập username trước khi gửi tin nhắn.");
-                return;
+            }
+            else
+            {
+                // Gửi tin nhắn lên server kèm theo username
+                writer.WriteLine(tbMes.Text);
+                writer.Flush();
+                tbMes.Clear();
             }
 
-            // Gửi tin nhắn lên server kèm theo username
-            writer.WriteLine(tbMes.Text);
-            writer.Flush();
-            tbMes.Clear();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra trạng thái kết nối với máy chủ
+            if (client != null && client.Connected)
+            {
+                // Máy chủ đang mở, không cần thực hiện gì cả
+                return;
+            }
+            else if (client == null || !client.Connected)
+            {
+
+                btnConnect.Enabled = true;
+                btnDisconect.Enabled = false;
+                btnSend.Enabled = false;
+            }
+        }
+
+        private void Task4_Client_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Hiển thị hộp thoại xác nhận khi người dùng cố gắng đóng Form
+            DialogResult result;
+            if (isInChat == true)
+            {
+                result = MessageBox.Show("Bạn có muốn rời khỏi cuộc trò chuyện không?", "Rời khỏi cuộc trò chuyện", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            }
+            else
+            {
+                result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Xác nhận thoát chương trình", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            }
+
+            // Nếu người dùng chọn "Cancel", hủy việc đóng Form
+            if (result == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+            // Nếu người dùng chọn "OK", đóng Form và dừng server (nếu cần)
+            else if (result == DialogResult.OK)
+            {
+                if (isInChat == true)
+                {
+                    // Dừng server hoặc thực hiện các thao tác cần thiết trước khi đóng
+                    btnDisconect_Click(this, e);
+                }
+
+            }
         }
     }
 }
