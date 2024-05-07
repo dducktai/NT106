@@ -71,9 +71,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(26, 88);
             label2.Name = "label2";
-            label2.Size = new Size(108, 25);
+            label2.Size = new Size(118, 25);
             label2.TabIndex = 4;
-            label2.Text = "IP: 127.0.0.1";
+            label2.Text = "IP: 127.0.10.1";
             // 
             // label3
             // 
@@ -97,7 +97,7 @@
             Name = "Task2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Task2";
-            FormClosed += Task2_FormClosed;
+            FormClosing += Task2_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }

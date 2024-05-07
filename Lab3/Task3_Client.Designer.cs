@@ -35,7 +35,7 @@
             // 
             btnSend.Location = new Point(102, 52);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(292, 37);
+            btnSend.Size = new Size(292, 44);
             btnSend.TabIndex = 0;
             btnSend.Text = "Send Message";
             btnSend.UseVisualStyleBackColor = true;

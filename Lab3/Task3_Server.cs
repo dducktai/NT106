@@ -19,7 +19,9 @@ namespace Lab3
             InitializeComponent();
         }
 
+        private bool isListening = false;
         private Socket listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        private bool stopListening = false;
 
         private void btnListen_Click(object sender, EventArgs e)
         {
@@ -27,42 +29,74 @@ namespace Lab3
             btnListen.Enabled = false;
             Thread serverThread = new Thread(new ThreadStart(StartThread));
             serverThread.Start();
-
         }
+
+        private Socket clientSocket;
 
         private void StartThread()
         {
             listViewCommand.Items.Add("Server running on 127.0.0.1:8080");
             int bytesReceived = 0;
-            byte[] recv = new byte[1];
+            byte[] recv = new byte[1024]; // Tăng kích thước buffer để nhận dữ liệu từ client
             Socket clientSocket;
             IPEndPoint ipepServer = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080);
-            //Gan socket lang nghe toi dia chi IP cua may va port 8080
-            listenerSocket.Bind(ipepServer);
-            //bat dau lang nghe.Socket.Listening(int backlog) voi backlog la do dai toi da cua hang doi cac ket noi dang cho xu ly
-            listenerSocket.Listen(-1);
-            //Dong y ket noi
-            clientSocket = listenerSocket.Accept();
-            //Nhan du lieu
-            listViewCommand.Items.Add(new ListViewItem("New client connected!"));
-            while (clientSocket.Connected)
+
+            try
             {
-                string text = "";
-                do
+                listenerSocket.Bind(ipepServer);
+                listenerSocket.Listen(-1);
+                isListening = true;
+                while (!stopListening)
                 {
-                    bytesReceived = clientSocket.Receive(recv);
-                    text += Encoding.ASCII.GetString(recv);
+                    clientSocket = listenerSocket.Accept();
+
+                    listViewCommand.Items.Add(new ListViewItem("New client connected!"));
+
+                    while (clientSocket.Connected)
+                    {
+                        string text = "";
+                        do
+                        {
+                            bytesReceived = clientSocket.Receive(recv);
+                            text += Encoding.ASCII.GetString(recv, 0, bytesReceived);
+                        }
+                        while (text[text.Length - 1] != '\n');
+
+                        listViewCommand.Items.Add(new ListViewItem(text));
+
+                        if (text.Trim() == "Quit")
+                        {
+                            clientSocket.Shutdown(SocketShutdown.Both);
+                            clientSocket.Close();
+                            break;
+                        }
+                    }
                 }
-                while (text[text.Length - 1] != '\n');
-                listViewCommand.Items.Add(new ListViewItem(text));
             }
-            listenerSocket.Close();
+            catch (SocketException)
+            {
+                listViewCommand.Items.Add(new ListViewItem("Đã đóng kết nối!"));
+            }
+            finally
+            {
+                if (listenerSocket != null && listenerSocket.Connected)
+                {
+                    listenerSocket.Close();
+                }
+            }
         }
 
-        private void Task3_Server_FormClosed(object sender, FormClosedEventArgs e)
+        private void listViewCommand_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listenerSocket != null)
+
+        }
+
+        private void Task3_Server_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            stopListening = true; // Dừng tiến trình lắng nghe
+            if (listenerSocket != null && listenerSocket.Connected)
             {
+                listenerSocket.Shutdown(SocketShutdown.Both);
                 listenerSocket.Close();
             }
         }

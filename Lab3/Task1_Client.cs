@@ -66,7 +66,7 @@ namespace Lab3
 
         }
 
-        private void Task1_Client_FormClosed(object sender, FormClosedEventArgs e)
+        private void Task1_Client_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (udpClient != null)
             {

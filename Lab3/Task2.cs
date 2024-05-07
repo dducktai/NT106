@@ -23,12 +23,14 @@ namespace Lab3
 
         private void btnListen_Click(object sender, EventArgs e)
         {
+            btnListen.Enabled = false;
             Thread serverThread = new Thread(new ThreadStart(StartThread));
             serverThread.IsBackground = true;
             serverThread.Start();
         }
 
-        Socket listenerSocket;
+        private Socket listenerSocket;
+        private Socket clientSocket;
         private void StartThread()
         {
             listViewCommand.Items.Add(new ListViewItem("Server bắt đầu lắng nghe!"));
@@ -37,38 +39,45 @@ namespace Lab3
             listViewCommand.Items.Add(new ListViewItem("Waiting for connection"));
             int bytesRecv = 0;
             byte[] recv = new byte[1];
-            Socket clientSocket;
 
             listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPEndPoint ipepSV = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080);
+            IPEndPoint ipepSV = new IPEndPoint(IPAddress.Parse("127.0.10.1"), 8080);
             listenerSocket.Bind(ipepSV);
             listenerSocket.Listen(-1);
 
-            while (true)
+            try
             {
-                clientSocket = listenerSocket.Accept();
-                listViewCommand.Items.Add(new ListViewItem("New client connected"));
-
-                while (clientSocket.Connected)
+                while (true)
                 {
-                    string text = "";
-                    do
-                    {
-                        bytesRecv = clientSocket.Receive(recv);
-                        text += Encoding.ASCII.GetString(recv);
-                    }
-                    while (text[text.Length - 1] != '\n');
+                    clientSocket = listenerSocket.Accept();
+                    listViewCommand.Items.Add(new ListViewItem("New client connected"));
 
-                    if (bytesRecv == 0) // Kiểm tra nếu kết nối đã đóng
+                    while (clientSocket.Connected)
                     {
-                        listViewCommand.Items.Add(new ListViewItem("Client disconnected"));
-                        break; // Dừng vòng lặp khi kết nối đã đóng
-                    }
+                        string text = "";
+                        do
+                        {
+                            bytesRecv = clientSocket.Receive(recv);
+                            text += Encoding.ASCII.GetString(recv);
+                        }
+                        while (text[text.Length - 1] != '\n');
 
-                    listViewCommand.Items.Add(new ListViewItem("You said: " + text));
+                        if (bytesRecv == 0) // Kiểm tra nếu kết nối đã đóng
+                        {
+                            listViewCommand.Items.Add(new ListViewItem("Client disconnected"));
+                            break; // Dừng vòng lặp khi kết nối đã đóng
+                        }
+
+                        listViewCommand.Items.Add(new ListViewItem("You said: " + text));
+                    }
+                    clientSocket.Close();
                 }
-                clientSocket.Close();
             }
+            catch (Exception ex)
+            {
+
+            }
+            
         }
 
 
@@ -82,12 +91,16 @@ namespace Lab3
 
         }
 
-        private void Task2_FormClosed(object sender, FormClosedEventArgs e)
+        private void Task2_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (listenerSocket != null && listenerSocket.Connected)
             {
                 listenerSocket.Shutdown(SocketShutdown.Both);
                 listenerSocket.Close();
+            }
+            if (clientSocket != null) 
+            { 
+                clientSocket.Close();
             }
         }
     }

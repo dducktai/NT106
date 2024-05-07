@@ -52,7 +52,7 @@
             // 
             // btnListen
             // 
-            btnListen.Location = new Point(631, 57);
+            btnListen.Location = new Point(630, 51);
             btnListen.Name = "btnListen";
             btnListen.Size = new Size(112, 34);
             btnListen.TabIndex = 6;

@@ -18,6 +18,7 @@ namespace Lab3
         {
             InitializeComponent();
         }
+        private bool isServerRunning = false;
         private TcpListener tcpListener;
         private List<TcpClient> clients = new List<TcpClient>();
         private void AppendLog(string message)
@@ -31,6 +32,7 @@ namespace Lab3
             {
                 lvLog.Items.Add(message + Environment.NewLine);
             }
+
         }
         private void BroadcastMessage(string message, TcpClient excludedClient = null)
         {
@@ -127,6 +129,7 @@ namespace Lab3
                     break;
                 }
             }
+
         }
 
         private void StartServer()
@@ -139,11 +142,21 @@ namespace Lab3
                 AppendLog("Server đang lắng nghe...");
                 Thread listenThread = new Thread(ListenForClients);
                 listenThread.Start();
+                isServerRunning = true;
             }
             catch (Exception ex)
             {
                 //MessageBox.Show(ex.Message, "Lỗi, không kết nối được!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void StartServer()
+        {
+            StartServer();
+            BroadcastMessage("SERVER_OPEN");
+
+            btnClose.Enabled = true;
+            btnListen.Enabled = false;
         }
         private void btnListen_Click(object sender, EventArgs e)
         {

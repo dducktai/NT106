@@ -50,6 +50,7 @@
             listViewCommand.TabIndex = 2;
             listViewCommand.UseCompatibleStateImageBehavior = false;
             listViewCommand.View = View.List;
+            listViewCommand.SelectedIndexChanged += listViewCommand_SelectedIndexChanged;
             // 
             // Task3_Server
             // 
@@ -61,7 +62,7 @@
             Name = "Task3_Server";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Task3_Server";
-            FormClosed += Task3_Server_FormClosed;
+            FormClosing += Task3_Server_FormClosing;
             ResumeLayout(false);
         }
 

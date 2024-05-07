@@ -32,6 +32,7 @@ namespace Lab3
 
         private void Task3_Client_Load(object sender, EventArgs e)
         {
+            CheckForIllegalCrossThreadCalls = false;
             tcpClient = new TcpClient();
             IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
             IPEndPoint ipEndPoint = new IPEndPoint(ipAddress, 8080);
@@ -42,7 +43,7 @@ namespace Lab3
 
         private void Task3_Client_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (networkStream != null)
+            if (networkStream != null && networkStream.CanWrite)
             {
                 Byte[] data = Encoding.ASCII.GetBytes("Quit\n");
                 networkStream.Write(data, 0, data.Length);

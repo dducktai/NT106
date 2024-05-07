@@ -42,15 +42,22 @@ namespace Lab3
                 lwMessage.Items.Add(new ListViewItem("Server bắt đầu lắng nghe!"));
                 /*MessageBox.Show("Server bắt đầu lắng nghe!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);*/
-                while (true)
+                try
                 {
-                    IPEndPoint RemoteIpEndPoint = new IPEndPoint(IPAddress.Any, 0);
-                    Byte[] receiveBytes = udpClient.Receive(ref RemoteIpEndPoint);
-                    string returnData = Encoding.UTF8.GetString(receiveBytes);
-                    string mess = RemoteIpEndPoint.Address.ToString() + ": " + returnData.ToString();
-                    InfoMessage(mess);
+                    while (true)
+                    {
+                        IPEndPoint RemoteIpEndPoint = new IPEndPoint(IPAddress.Any, 0);
+                        Byte[] receiveBytes = udpClient.Receive(ref RemoteIpEndPoint);
+                        string returnData = Encoding.UTF8.GetString(receiveBytes);
+                        string mess = RemoteIpEndPoint.Address.ToString() + ": " + returnData.ToString();
+                        InfoMessage(mess);
+                    }
+                    //udpClient.Close();
                 }
-                udpClient.Close();
+                catch (Exception ex)
+                {
+
+                }
             }
         }
 
@@ -74,10 +81,10 @@ namespace Lab3
 
         private void Task1_Server_FormClosing(object sender, FormClosingEventArgs e)
         {
-            /*if (udpClient != null)
+            if (udpClient != null)
             {
                 udpClient.Close();
-            }*/
+            }
         }
 
         private void lwMessage_SelectedIndexChanged(object sender, EventArgs e)
