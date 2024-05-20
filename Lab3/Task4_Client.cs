@@ -172,23 +172,6 @@ namespace Lab3
 
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            // Kiểm tra trạng thái kết nối với máy chủ
-            if (client != null && client.Connected)
-            {
-                // Máy chủ đang mở, không cần thực hiện gì cả
-                return;
-            }
-            else if (client == null || !client.Connected)
-            {
-
-                btnConnect.Enabled = true;
-                btnDisconect.Enabled = false;
-                btnSend.Enabled = false;
-            }
-        }
-
         private void Task4_Client_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Hiển thị hộp thoại xác nhận khi người dùng cố gắng đóng Form

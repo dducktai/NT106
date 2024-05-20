@@ -36,8 +36,6 @@
             btnDisconect = new Button();
             btnSend = new Button();
             lvMess = new ListView();
-            columnHeader1 = new ColumnHeader();
-            btnRefresh = new Button();
             SuspendLayout();
             // 
             // textBoxUserName
@@ -107,36 +105,19 @@
             // 
             // lvMess
             // 
-            lvMess.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
-            lvMess.HeaderStyle = ColumnHeaderStyle.None;
             lvMess.Location = new Point(35, 47);
             lvMess.Margin = new Padding(4);
             lvMess.Name = "lvMess";
             lvMess.Size = new Size(1111, 378);
             lvMess.TabIndex = 10;
             lvMess.UseCompatibleStateImageBehavior = false;
-            lvMess.View = View.Details;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Width = 1000;
-            // 
-            // btnRefresh
-            // 
-            btnRefresh.Location = new Point(678, 462);
-            btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(150, 46);
-            btnRefresh.TabIndex = 11;
-            btnRefresh.Text = "Refresh";
-            btnRefresh.UseVisualStyleBackColor = true;
-            btnRefresh.Click += btnRefresh_Click;
+            lvMess.View = View.List;
             // 
             // Task4_Client
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1192, 737);
-            Controls.Add(btnRefresh);
             Controls.Add(lvMess);
             Controls.Add(btnSend);
             Controls.Add(btnDisconect);
@@ -147,7 +128,6 @@
             Controls.Add(textBoxUserName);
             Name = "Task4_Client";
             Text = "Task4_Client";
-            FormClosing += Task4_Client_FormClosing;
             Load += Task4_Client_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -163,7 +143,5 @@
         private Button btnDisconect;
         private Button btnSend;
         private ListView lvMess;
-        private Button btnRefresh;
-        private ColumnHeader columnHeader1;
     }
 }
