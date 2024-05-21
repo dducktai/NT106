@@ -83,6 +83,8 @@ namespace Lab4
                     try
                     {
                         myClient.DownloadFile(url, filePath);
+                        MessageBox.Show("Tải xuống thành công!", "Chúc mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     }
                     catch (Exception ex)
                     {
@@ -90,7 +92,6 @@ namespace Lab4
                     }
 
                 }
-                MessageBox.Show("Tải xuống thành công!", "Chúc mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
      
         }
