@@ -21,52 +21,65 @@ namespace Lab4
             InitializeComponent();
         }
 
-        //private string NormalSource(string URL)
-        //{
-        //    // Thêm giao thức mặc định nếu không có
-        //    if (!URL.StartsWith("http://") && !URL.StartsWith("https://"))
-        //    {
-        //        URL = "https://" + URL;
-        //        return URL;
-        //    }
-        //    return URL;
+        private string NormalSource(string URL)
+        {
+            // Thêm giao thức mặc định nếu không có
+            if (!URL.StartsWith("http://") && !URL.StartsWith("https://"))
+            {
+                URL = "https://" + URL;
+                return URL;
+            }
+            return URL;
 
-        //}
-        //private string getSource(string URL)
-        //{
+        }
+        private string getSource(string URL)
+        {
 
-        //    try
-        //    {
-        //        URL = NormalSource(URL);
+            try
+            {
+                URL = NormalSource(URL);
 
-        //        HtmlWeb web = new HtmlWeb();
-        //        HtmlAgilityPack.HtmlDocument content = new HtmlAgilityPack.HtmlDocument(); // Khởi tạo và tải nội dung trực tiếp
-        //        content = web.Load(URL);
-        //        string s = content.Text;
-        //        return s;  // Trả về nội dung HTML của trang
-        //    }
-        //    catch (UriFormatException)
-        //    {
-        //        return "URL không hợp lệ!";
-        //    }
-        //    catch (System.Net.WebException)
-        //    {
-        //        return "Không thể kết nối đến URL!";
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return "Đã xảy ra lỗi khi tải nội dung!";
-        //    }
-        //}
+                HtmlWeb web = new HtmlWeb();
+                HtmlAgilityPack.HtmlDocument content = new HtmlAgilityPack.HtmlDocument(); // Khởi tạo và tải nội dung trực tiếp
+                content = web.Load(URL);
+                string s = content.Text;
+                return s;  // Trả về nội dung HTML của trang
+            }
+            catch (UriFormatException)
+            {
+                return "URL không hợp lệ!";
+            }
+            catch (System.Net.WebException)
+            {
+                return "Không thể kết nối đến URL!";
+            }
+            catch (Exception)
+            {
+                return "Đã xảy ra lỗi khi tải nội dung!";
+            }
+        }
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
-            WebClient myClient = new WebClient();
-            Stream response = myClient.OpenRead(txtURL.Text);
-            myClient.DownloadFile(txtURL.Text, txtPath.Text);
+            string url = NormalSource(txtURL.Text);
+            if (getSource(url) == "URL không tồn tại!")
+            {
+                MessageBox.Show("URL không tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                
 
-            string content = new StreamReader(response).ReadToEnd();
-            rtbHTML.Text = content;
+                WebClient myClient = new WebClient();
+                Stream response = myClient.OpenRead(url);
+                myClient.DownloadFile(url, txtPath.Text);
+
+                string content = new StreamReader(response).ReadToEnd();
+                MessageBox.Show("Tải về thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                rtbHTML.Text = content;
+
+            }
         }
     }
 }
