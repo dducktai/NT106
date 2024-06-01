@@ -168,5 +168,10 @@ namespace Lab1
         {
             this.Hide();
         }
+
+        private void Task5_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

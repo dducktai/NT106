@@ -313,6 +313,7 @@
             Controls.Add(label1);
             Name = "Task5";
             Text = "Task5";
+            Load += Task5_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             panel1.ResumeLayout(false);
