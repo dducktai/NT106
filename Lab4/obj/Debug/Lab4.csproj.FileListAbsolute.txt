@@ -16,3 +16,31 @@ C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab4\obj\Debug\Lab4.cspro
 C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab4\obj\Debug\Lab4.csproj.Up2Date
 C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab4\obj\Debug\Lab4.exe
 C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab4\obj\Debug\Lab4.pdb
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\Lab4.exe.config
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\Lab4.exe
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\Lab4.pdb
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.csproj.AssemblyReference.cache
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.Main.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.Task1.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.Task2.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.Task3.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.Task4.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.csproj.GenerateResource.cache
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.csproj.CoreCompileInputs.cache
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.csproj.Up2Date
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.exe
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.pdb
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\obj\Debug\Lab4.SourceCode.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\Microsoft.Web.WebView2.Core.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab4\bin\Debug\Microsoft.Web.WebView2.Wpf.xml

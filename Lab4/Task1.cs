@@ -25,19 +25,41 @@ namespace Lab4
 
         }
 
+        private string NormalSource(string URL)
+        {
+            // Thêm giao thức mặc định nếu không có
+            if (!URL.StartsWith("http://") && !URL.StartsWith("https://"))
+            {
+                URL = "https://" + URL;
+                return URL;
+            }
+            return URL;
+
+        }
         private string getSource(string URL)
         {
+
             try
             {
+                URL = NormalSource(URL);
+
                 HtmlWeb web = new HtmlWeb();
-                HtmlAgilityPack.HtmlDocument content = new HtmlAgilityPack.HtmlDocument();
+                HtmlAgilityPack.HtmlDocument content = new HtmlAgilityPack.HtmlDocument(); // Khởi tạo và tải nội dung trực tiếp
                 content = web.Load(URL);
                 string s = content.Text;
-                return s;
+                return s;  // Trả về nội dung HTML của trang
             }
-            catch
+            catch (UriFormatException)
             {
-                return "URL không tồn tại!";
+                return "URL không hợp lệ!";
+            }
+            catch (System.Net.WebException)
+            {
+                return "Không thể kết nối đến URL!";
+            }
+            catch (Exception)
+            {
+                return "Đã xảy ra lỗi khi tải nội dung!";
             }
         }
 
@@ -68,12 +90,13 @@ namespace Lab4
         }
         private void btnGet_Click(object sender, EventArgs e)
         {
-            if (getSource(txtURL.Text) == "URL không tồn tại!")
+            string url = NormalSource(txtURL.Text);
+            if (getSource(url) == "URL không tồn tại!")
             {
                 MessageBox.Show("URL không tồn tại!");
             }
             else
-                rtbHTML.Text = GetHTML(txtURL.Text);
+                rtbHTML.Text = GetHTML(url);
         }
     }
 }
