@@ -34,11 +34,11 @@
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listMail = new System.Windows.Forms.ListView();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbTotal = new System.Windows.Forms.Label();
             this.lbRecent = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -99,15 +99,6 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "CHECK MAIL";
             // 
-            // listMail
-            // 
-            this.listMail.HideSelection = false;
-            this.listMail.Location = new System.Drawing.Point(87, 220);
-            this.listMail.Name = "listMail";
-            this.listMail.Size = new System.Drawing.Size(902, 355);
-            this.listMail.TabIndex = 26;
-            this.listMail.UseCompatibleStateImageBehavior = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -146,6 +137,15 @@
             this.lbRecent.Size = new System.Drawing.Size(0, 22);
             this.lbRecent.TabIndex = 30;
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(87, 220);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(902, 355);
+            this.listView1.TabIndex = 26;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // Task2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -155,7 +155,7 @@
             this.Controls.Add(this.lbTotal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.listMail);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);
@@ -177,10 +177,10 @@
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listMail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Label lbRecent;
+        private System.Windows.Forms.ListView listView1;
     }
 }

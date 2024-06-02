@@ -36,3 +36,4 @@ C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\bin\Debug\System.Run
 C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\bin\Debug\System.ValueTuple.xml
 C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\obj\Debug\Lab5.csproj.Up2Date
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\bin\Debug\ICSharpCode.SharpZipLib.dll
