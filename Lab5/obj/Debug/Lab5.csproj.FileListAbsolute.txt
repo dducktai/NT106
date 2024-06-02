@@ -1,0 +1,12 @@
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\bin\Debug\Lab5.exe.config
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\bin\Debug\Lab5.exe
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\bin\Debug\Lab5.pdb
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\obj\Debug\Lab5.csproj.AssemblyReference.cache
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\obj\Debug\Lab5.Main.resources
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\obj\Debug\Lab5.Properties.Resources.resources
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\obj\Debug\Lab5.Task1.resources
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\obj\Debug\Lab5.Task2.resources
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\obj\Debug\Lab5.csproj.GenerateResource.cache
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\obj\Debug\Lab5.csproj.CoreCompileInputs.cache
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\obj\Debug\Lab5.exe
+C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\obj\Debug\Lab5.pdb

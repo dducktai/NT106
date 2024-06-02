@@ -90,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Task1.resx">
+      <DependentUpon>Task1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Task2.resx">
       <DependentUpon>Task2.cs</DependentUpon>
     </EmbeddedResource>
