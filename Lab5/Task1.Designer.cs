@@ -157,13 +157,14 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label7.Location = new System.Drawing.Point(146, 155);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(829, 40);
+            this.label7.Size = new System.Drawing.Size(819, 40);
             this.label7.TabIndex = 18;
             this.label7.Text = "---------------------------------------------------------------------------------" +
     "--------------------------------------------------------------------------------" +
-    "---\r\n\r\n";
+    "-\r\n\r\n";
             // 
             // Task1
             // 
