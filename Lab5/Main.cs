@@ -34,11 +34,5 @@ namespace Lab5
             Task3 task3 = new Task3();
             task3.Show();
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Task4 task4 = new Task4();
-            task4.Show();
-        }
     }
 }

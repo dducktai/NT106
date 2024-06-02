@@ -74,6 +74,7 @@
             // 
             this.tbPassword.Location = new System.Drawing.Point(150, 113);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(340, 26);
             this.tbPassword.TabIndex = 10;
             // 
@@ -183,6 +184,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Name = "Task1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Task1";
             this.ResumeLayout(false);
             this.PerformLayout();
