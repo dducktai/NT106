@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace Lab5
 {
@@ -47,9 +48,32 @@ namespace Lab5
             listView1.Columns.Add("Time Received", 150);
             listView1.Columns.Add("Subject", 300);
         }
+        private bool CheckRequiredFields()
+        {
+            // Kiểm tra các trường bắt buộc
+            if (string.IsNullOrWhiteSpace(tbUsername.Text))
+            {
+                MessageBox.Show("Please enter the sender's email username.");
+                return false;
+            }
 
+            if (string.IsNullOrWhiteSpace(tbPassword.Text))
+            {
+                MessageBox.Show("Please enter the sender's email password.");
+                return false;
+            }
+
+ 
+
+            return true; // Tất cả các kiểm tra đều đã vượt qua
+        }
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+            // Kiểm tra các trường bắt buộc trước khi gửi
+            if (!CheckRequiredFields())
+            {
+                return; // Nếu kiểm tra không vượt qua, ngăn chặn việc gửi email
+            }
             Constants.SetCredentials(tbUsername.Text, tbPassword.Text);
 
             var listEmail = new List<EmailInfo>();
