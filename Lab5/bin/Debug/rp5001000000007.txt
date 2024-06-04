@@ -1,0 +1,123 @@
+   ---------------------------------------   -------------------------------   ------------------------------------------------------
+   MDaemon Statistics Report (last 7 days)   Starting Date: Tue, 04 Jun 2024   Server/Up Time: 00:00
+   ---------------------------------------   -------------------------------   ------------------------------------------------------
+
+     SMTP     -----------------------------------------------------------------------------------------------------------------------
+     IMAP     Since last   7 day        Starting     1 day        2 days       3 days       4 days       5 days       6 days
+     POP      start        total        Date         previous     previous     previous     previous     previous     previous
+              -----------------------------------------------------------------------------------------------------------------------
+   SMTP sessions
+   (inbound)  3            3            3            0            0            0            0            0            0            
+                           0.0/hr       0.2/hr                                                                                     
+   SMTP sessions
+   (outbound) 0            0            0            0            0            0            0            0            0            
+                                                                                                                                   
+   SMTP msgs
+   received   3            3            3            0            0            0            0            0            0            
+                           0.0/hr       0.2/hr                                                                                     
+   SMTP msgs
+   sent       0            0            0            0            0            0            0            0            0            
+                                                                                                                                   
+   IMAP       
+   sessions   9            9            9            0            0            0            0            0            0            
+                           0.1/hr       0.6/hr                                                                                     
+   POP        
+   sessions   0            0            0            0            0            0            0            0            0            
+                                                                                                                                   
+              -----------------------------------------------------------------------------------------------------------------------
+
+              -----------------------------------------------------------------------------------------------------------------------
+     Spam     Since last   7 day        Starting     1 day        2 days       3 days       4 days       5 days       6 days
+              start        total        Date         previous     previous     previous     previous     previous     previous
+              -----------------------------------------------------------------------------------------------------------------------
+   Spam       
+   accepted   0            0            0            0            0            0            0            0            0            
+              0.00%        0.00%        0.00%                                                                                      
+   Spam       
+   refused    0            0            0            0            0            0            0            0            0            
+                                                                                                                                   
+   DNSBL      
+   accepted   0            0            0            0            0            0            0            0            0            
+                                                                                                                                   
+   DNSBL      
+   refused    0            0            0            0            0            0            0            0            0            
+                                                                                                                                   
+   IP         
+   Screen     0            0            0            0            0            0            0            0            0            
+                                                                                                                                   
+   Host       
+   Screen     0            0            0            0            0            0            0            0            0            
+                                                                                                                                   
+              -----------------------------------------------------------------------------------------------------------------------
+
+              -----------------------------------------------------------------------------------------------------------------------
+     Virus    Since last   7 day        Starting     1 day        2 days       3 days       4 days       5 days       6 days
+              start        total        Date         previous     previous     previous     previous     previous     previous
+              -----------------------------------------------------------------------------------------------------------------------
+   Virus      
+   accepted   0            0            0            0            0            0            0            0            0            
+              0.00%        0.00%        0.00%                                                                                      
+   Virus      
+   refused    0            0            0            0            0            0            0            0            0            
+                                                                                                                                   
+              -----------------------------------------------------------------------------------------------------------------------
+
+              -----------------------------------------------------------------------------------------------------------------------
+     DPOP     Since last   7 day        Starting     1 day        2 days       3 days       4 days       5 days       6 days
+     MPOP     start        total        Date         previous     previous     previous     previous     previous     previous
+              -----------------------------------------------------------------------------------------------------------------------
+   DomainPOP  
+   received   0            0            0            0            0            0            0            0            0            
+                                                                                                                                   
+   MultiPOP   
+   received   0            0            0            0            0            0            0            0            0            
+                                                                                                                                   
+              -----------------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Cluster Service               7 day        Today      1 day        2 days       3 days       4 days       5 days       6 days
+                              total                  previous     previous     previous     previous     previous     previous
+-------------------------------------------------------------------------------------------------------------------------------------
+File Updates Sent                 0            0
+File Deletes Sent                 0            0
+Reg Updates Sent                  0            0
+Cert Updates Sent                 0            0
+Cert Deletes Sent                 0            0
+Total Warnings/Errors             0            0
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Dynamic Screening                7 day        Today      1 day        2 days       3 days       4 days       5 days       6 days
+                                 total                  previous     previous     previous     previous     previous     previous
+-------------------------------------------------------------------------------------------------------------------------------------
+Connections Refused                  0            0            0            0            0            0            0            0
+Connections Allowed                  0            0            0            0            0            0            0            0
+Trusted IP Hits                      0            0            0            0            0            0            0            0
+Allow List Hits                     26           13           13            0            0            0            0            0
+Block List Hits                      0            0            0            0            0            0            0            0
+Location Screen Hits                 0            0            0            0            0            0            0            0
+Location Screen Refusals             0            0            0            0            0            0            0            0
+Logon Successes                      2            1            1            0            0            0            0            0
+Logon Failures                       0            0            0            0            0            0            0            0
+Block Operations                     0            0            0            0            0            0            0            0
+Unblock Operations                   0            0            0            0            0            0            0            0
+Expired block Operations             0            0            0            0            0            0            0            0
+Freeze Operations                    0            0            0            0            0            0            0            0
+Thaw Operations                      0            0            0            0            0            0            0            0
+
+-------------------------------------------------------------------------------------------------------------------------------------
+ActiveSync                              7 day        Today      1 day        2 days       3 days       4 days       5 days       6 days
+                                        total                  previous     previous     previous     previous     previous     previous
+-------------------------------------------------------------------------------------------------------------------------------------
+Sessions: Initiated                         0            0            0            0            0            0            0            0
+Sessions: Terminated                        0            0            0            0            0            0            0            0
+Requests: Total                             0            0            0            0            0            0            0            0
+Logons Refused                              0            0            0            0            0            0            0            0
+Total Warnings/Errors                       0            0            0            0            0            0            0            0
+Error: Network                              0            0            0            0            0            0            0            0
+Error: MDaemon API                          0            0            0            0            0            0            0            0
+Error: Imap.mrk                             0            0            0            0            0            0            0            0
+Error: Sync Rollbacks                       0            0            0            0            0            0            0            0
+Warning: Invalid FolderSync Key             0            0            0            0            0            0            0            0
+Warning: Invalid Sync Key                   0            0            0            0            0            0            0            0
+Warning: Unknown Collection ID              0            0            0            0            0            0            0            0
