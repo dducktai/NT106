@@ -43,7 +43,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnLogin.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnLogin.Font = new System.Drawing.Font("Montserrat ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogin.Location = new System.Drawing.Point(881, 85);
@@ -61,6 +61,7 @@
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(682, 26);
             this.tbPassword.TabIndex = 22;
+            this.tbPassword.Text = "Tai@09112004";
             // 
             // label3
             // 
@@ -78,6 +79,7 @@
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(682, 26);
             this.tbUsername.TabIndex = 20;
+            this.tbUsername.Text = "taidang@ducktai.uit";
             // 
             // label1
             // 

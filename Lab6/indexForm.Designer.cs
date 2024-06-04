@@ -38,13 +38,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnClient
             // 
-            this.btnClient.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClient.BackColor = System.Drawing.Color.LimeGreen;
             this.btnClient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClient.Font = new System.Drawing.Font("UTM Avo", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient.ForeColor = System.Drawing.Color.Black;
             this.btnClient.Location = new System.Drawing.Point(28, 224);
             this.btnClient.Margin = new System.Windows.Forms.Padding(4);
@@ -57,9 +58,9 @@
             // 
             // btnServer
             // 
-            this.btnServer.BackColor = System.Drawing.SystemColors.Control;
+            this.btnServer.BackColor = System.Drawing.Color.LimeGreen;
             this.btnServer.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServer.Font = new System.Drawing.Font("UTM Avo", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServer.ForeColor = System.Drawing.Color.Black;
             this.btnServer.Location = new System.Drawing.Point(442, 224);
             this.btnServer.Margin = new System.Windows.Forms.Padding(4);
@@ -75,11 +76,11 @@
             this.joinPort.BackColor = System.Drawing.SystemColors.Control;
             this.joinPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.joinPort.ForeColor = System.Drawing.Color.Black;
-            this.joinPort.Location = new System.Drawing.Point(175, 156);
+            this.joinPort.Location = new System.Drawing.Point(185, 449);
             this.joinPort.Margin = new System.Windows.Forms.Padding(4);
             this.joinPort.MaxLength = 5;
             this.joinPort.Name = "joinPort";
-            this.joinPort.Size = new System.Drawing.Size(208, 28);
+            this.joinPort.Size = new System.Drawing.Size(208, 32);
             this.joinPort.TabIndex = 2;
             this.joinPort.Text = "65535";
             this.joinPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -89,36 +90,35 @@
             this.joinIP.BackColor = System.Drawing.SystemColors.Control;
             this.joinIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.joinIP.ForeColor = System.Drawing.Color.Black;
-            this.joinIP.Location = new System.Drawing.Point(175, 102);
+            this.joinIP.Location = new System.Drawing.Point(346, 393);
             this.joinIP.Margin = new System.Windows.Forms.Padding(4);
             this.joinIP.Name = "joinIP";
-            this.joinIP.Size = new System.Drawing.Size(208, 28);
+            this.joinIP.Size = new System.Drawing.Size(208, 32);
             this.joinIP.TabIndex = 1;
             this.joinIP.Text = "localhost";
             this.joinIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // joinUsername
             // 
-            this.joinUsername.BackColor = System.Drawing.SystemColors.Control;
-            this.joinUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.joinUsername.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.joinUsername.Font = new System.Drawing.Font("Montserrat Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.joinUsername.ForeColor = System.Drawing.Color.Black;
-            this.joinUsername.Location = new System.Drawing.Point(175, 51);
+            this.joinUsername.Location = new System.Drawing.Point(371, 143);
             this.joinUsername.Margin = new System.Windows.Forms.Padding(4);
             this.joinUsername.Name = "joinUsername";
-            this.joinUsername.Size = new System.Drawing.Size(208, 28);
+            this.joinUsername.Size = new System.Drawing.Size(268, 34);
             this.joinUsername.TabIndex = 0;
-            this.joinUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // hostPort
             // 
             this.hostPort.BackColor = System.Drawing.SystemColors.Control;
             this.hostPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.hostPort.ForeColor = System.Drawing.Color.Black;
-            this.hostPort.Location = new System.Drawing.Point(543, 166);
+            this.hostPort.Location = new System.Drawing.Point(553, 446);
             this.hostPort.Margin = new System.Windows.Forms.Padding(4);
             this.hostPort.MaxLength = 5;
             this.hostPort.Name = "hostPort";
-            this.hostPort.Size = new System.Drawing.Size(254, 28);
+            this.hostPort.Size = new System.Drawing.Size(254, 32);
             this.hostPort.TabIndex = 4;
             this.hostPort.Text = "65535";
             this.hostPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -126,49 +126,60 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(24, 54);
+            this.label1.Font = new System.Drawing.Font("Montserrat Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(152, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 24);
+            this.label1.Size = new System.Drawing.Size(212, 30);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Nhập username:";
+            this.label1.Text = "Enter username:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label2.Location = new System.Drawing.Point(24, 105);
+            this.label2.Location = new System.Drawing.Point(241, 396);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 24);
+            this.label2.Size = new System.Drawing.Size(98, 26);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Nhập địa chỉ:";
+            this.label2.Text = "Address:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label3.Location = new System.Drawing.Point(24, 159);
+            this.label3.Location = new System.Drawing.Point(34, 452);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 24);
+            this.label3.Size = new System.Drawing.Size(107, 26);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Nhập port:";
+            this.label3.Text = "User port:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label4.Location = new System.Drawing.Point(438, 163);
+            this.label4.Location = new System.Drawing.Point(447, 452);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 24);
+            this.label4.Size = new System.Drawing.Size(106, 26);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Nhập port:";
+            this.label4.Text = "Host port:";
             // 
-            // MainForm
+            // label5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(820, 337);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("UTM Avo", 22F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(136, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(536, 65);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "NUMBER MAGIC GAME";
+            // 
+            // indexForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(226)))), ((int)(((byte)(167)))));
+            this.ClientSize = new System.Drawing.Size(820, 329);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -183,7 +194,8 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "MainForm";
+            this.Name = "indexForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.ResumeLayout(false);
@@ -203,5 +215,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
