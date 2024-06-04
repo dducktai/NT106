@@ -37,3 +37,42 @@ C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\bin\Debug\System.Thr
 C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\bin\Debug\System.ValueTuple.xml
 C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\obj\Debug\Lab5.csproj.Up2Date
 C:\MyData\UIT\Semester_4\Lập trình Mạng\Lab\NT106\Lab5\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\Lab5.exe.config
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\Lab5.exe
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\Lab5.pdb
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\MailKit.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\MimeKit.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Buffers.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Formats.Asn1.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Memory.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.ValueTuple.dll
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\MailKit.pdb
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\MailKit.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\MailKit.dll.config
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\MimeKit.pdb
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\MimeKit.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\MimeKit.dll.config
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Buffers.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Formats.Asn1.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Memory.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\bin\Debug\System.ValueTuple.xml
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\obj\Debug\Lab5.csproj.AssemblyReference.cache
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\obj\Debug\Lab5.Main.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\obj\Debug\Lab5.Properties.Resources.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\obj\Debug\Lab5.Task1.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\obj\Debug\Lab5.Task2.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\obj\Debug\Lab5.Task3.resources
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\obj\Debug\Lab5.csproj.GenerateResource.cache
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\obj\Debug\Lab5.csproj.CoreCompileInputs.cache
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\obj\Debug\Lab5.csproj.Up2Date
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\obj\Debug\Lab5.exe
+C:\Users\Thien\UIT\Nam_2\Hoc_Ky_2\Lap_Trinh_Mang\NT106\Lab5\obj\Debug\Lab5.pdb
