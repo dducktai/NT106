@@ -77,8 +77,8 @@ namespace Lab06
             if (ress[0] == "Server")
             {
                 isServer = true;
-                btnReady.Enabled = btnSubmit.Enabled = btnAutoplayWholeGame.Enabled = btnAutoPlaySingleTurn.Enabled = btnClear.Enabled = label1.Enabled = false;
-                answer.BorderStyle = BorderStyle.None;
+                btnReady.Enabled = btnSubmit.Enabled = btnAutoplayWholeGame.Enabled = btnAutoPlaySingleTurn.Enabled = btnClear.Enabled = false;
+                answer.BorderStyle = (System.Drawing.Drawing2D.DashStyle)BorderStyle.None;
             }
             else if (ress[0] == "@@@Ingame!@@@")
             {
@@ -189,6 +189,11 @@ namespace Lab06
                 ansList[index] = temp;
                 valRange--;
             }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)

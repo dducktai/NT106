@@ -143,7 +143,7 @@ namespace Lab06
                     broadcast($"m>>> {username} vừa vào phòng chơi", username);
                     scoreBoard.Add(username, 0);
                 }
-                
+
                 clientsCount++;
 
                 Thread handlingThread = new Thread(o => clientCheck((string)o));
@@ -385,3 +385,4 @@ namespace Lab06
         }
     }
 }
+

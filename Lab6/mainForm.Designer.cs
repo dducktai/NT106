@@ -34,9 +34,6 @@
             this.message = new System.Windows.Forms.TextBox();
             this.conversation = new System.Windows.Forms.RichTextBox();
             this.btnReady = new System.Windows.Forms.Button();
-            this.answer = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
             this.playerNum = new System.Windows.Forms.Label();
             this.btnAutoPlaySingleTurn = new System.Windows.Forms.Button();
             this.btnAutoplayWholeGame = new System.Windows.Forms.Button();
@@ -48,6 +45,8 @@
             this.timerCnt = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.answer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // btnSend
@@ -124,52 +123,9 @@
             this.btnReady.UseVisualStyleBackColor = false;
             this.btnReady.Click += new System.EventHandler(this.btnReady_Click);
             // 
-            // answer
-            // 
-            this.answer.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.answer.Enabled = false;
-            this.answer.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answer.ForeColor = System.Drawing.Color.Black;
-            this.answer.Location = new System.Drawing.Point(699, 169);
-            this.answer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.answer.MaxLength = 3;
-            this.answer.Name = "answer";
-            this.answer.Size = new System.Drawing.Size(170, 32);
-            this.answer.TabIndex = 1;
-            this.answer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.answer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.answer_KeyDown);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Medium", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(533, 174);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 34);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Your answer:";
-            // 
-            // btnSubmit
-            // 
-            this.btnSubmit.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnSubmit.Enabled = false;
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.Font = new System.Drawing.Font("Montserrat ExtraBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(387, 168);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(138, 42);
-            this.btnSubmit.TabIndex = 6;
-            this.btnSubmit.TabStop = false;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
             // playerNum
             // 
-            this.playerNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(226)))), ((int)(((byte)(167)))));
+            this.playerNum.BackColor = System.Drawing.Color.WhiteSmoke;
             this.playerNum.Dock = System.Windows.Forms.DockStyle.Top;
             this.playerNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerNum.Location = new System.Drawing.Point(0, 0);
@@ -288,19 +244,58 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("UTM Avo", 22F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(165, 58);
+            this.label5.Font = new System.Drawing.Font("UTM Avo", 25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label5.Location = new System.Drawing.Point(120, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(536, 65);
+            this.label5.Size = new System.Drawing.Size(610, 73);
             this.label5.TabIndex = 18;
             this.label5.Text = "NUMBER MAGIC GAME";
+            // 
+            // answer
+            // 
+            this.answer.BorderRadius = 23;
+            this.answer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.answer.DefaultText = "Enter your answer";
+            this.answer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.answer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.answer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.answer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.answer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.answer.Font = new System.Drawing.Font("Montserrat", 8F);
+            this.answer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.answer.Location = new System.Drawing.Point(607, 165);
+            this.answer.Margin = new System.Windows.Forms.Padding(5);
+            this.answer.Name = "answer";
+            this.answer.PasswordChar = '\0';
+            this.answer.PlaceholderText = "";
+            this.answer.SelectedText = "";
+            this.answer.Size = new System.Drawing.Size(166, 43);
+            this.answer.TabIndex = 19;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BorderRadius = 22;
+            this.btnSubmit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSubmit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSubmit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSubmit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSubmit.Font = new System.Drawing.Font("Montserrat ExtraBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.Location = new System.Drawing.Point(781, 165);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(97, 42);
+            this.btnSubmit.TabIndex = 20;
+            this.btnSubmit.Text = "Submit";
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(226)))), ((int)(((byte)(167)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1179, 758);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.answer);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSend);
@@ -312,9 +307,6 @@
             this.Controls.Add(this.range);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.playerNum);
-            this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.answer);
             this.Controls.Add(this.btnReady);
             this.Controls.Add(this.conversation);
             this.Controls.Add(this.message);
@@ -339,9 +331,6 @@
         private System.Windows.Forms.TextBox message;
         public System.Windows.Forms.RichTextBox conversation;
         private System.Windows.Forms.Button btnReady;
-        private System.Windows.Forms.TextBox answer;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label playerNum;
         private System.Windows.Forms.Button btnAutoPlaySingleTurn;
         private System.Windows.Forms.Button btnAutoplayWholeGame;
@@ -353,5 +342,7 @@
         private System.Windows.Forms.Label timerCnt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2TextBox answer;
+        private Guna.UI2.WinForms.Guna2Button btnSubmit;
     }
 }

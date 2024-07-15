@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Firebase_Project", "Firebase_Project\Firebase_Project.csproj", "{467B2467-89F4-4380-991A-4290585C2613}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{467B2467-89F4-4380-991A-4290585C2613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467B2467-89F4-4380-991A-4290585C2613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467B2467-89F4-4380-991A-4290585C2613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467B2467-89F4-4380-991A-4290585C2613}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6D52DE9-7FFC-4524-96CC-83DB9833E2DB}
+	EndGlobalSection
+EndGlobal

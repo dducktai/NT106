@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|solutionrelative:task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|c:\\mydata\\uit\\semester_4\\l\u1EADp tr\u00ECnh m\u1EA1ng\\lab\\nt106\\lab5\\task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|solutionrelative:task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|c:\\mydata\\uit\\semester_4\\l\u1EADp tr\u00ECnh m\u1EA1ng\\lab\\nt106\\lab5\\task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|solutionrelative:task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|solutionrelative:task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ECAC7C6D-D7BA-46E0-BE27-073B063CDC00}|Lab5.csproj|C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Task3.cs [Design]",
               "DocumentMoniker": "C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\Task3.cs",
               "RelativeDocumentMoniker": "Task3.cs",
@@ -65,7 +65,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Task2.cs [Design]",
               "DocumentMoniker": "C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\Task2.cs",
               "RelativeDocumentMoniker": "Task2.cs",
@@ -77,19 +77,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Task1.cs [Design]",
               "DocumentMoniker": "C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\Task1.cs",
               "RelativeDocumentMoniker": "Task1.cs",
               "ToolTip": "C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\Task1.cs [Design]",
               "RelativeToolTip": "Task1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T01:51:05.164Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-04T01:51:05.164Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Main.cs [Design]",
               "DocumentMoniker": "C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\Main.cs",
               "RelativeDocumentMoniker": "Main.cs",
@@ -100,13 +99,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Task2.cs",
               "DocumentMoniker": "C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\Task2.cs",
               "RelativeDocumentMoniker": "Task2.cs",
               "ToolTip": "C:\\MyData\\UIT\\Semester_4\\L\u1EADp tr\u00ECnh M\u1EA1ng\\Lab\\NT106\\Lab5\\Task2.cs",
               "RelativeToolTip": "Task2.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAIwBAAAAAFAAAA",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAswJAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T11:19:49.181Z",
               "EditorCaption": ""

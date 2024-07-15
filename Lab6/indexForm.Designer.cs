@@ -28,48 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnClient = new System.Windows.Forms.Button();
-            this.btnServer = new System.Windows.Forms.Button();
             this.joinPort = new System.Windows.Forms.TextBox();
             this.joinIP = new System.Windows.Forms.TextBox();
-            this.joinUsername = new System.Windows.Forms.TextBox();
             this.hostPort = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnClient = new Guna.UI2.WinForms.Guna2Button();
+            this.btnServer = new Guna.UI2.WinForms.Guna2Button();
+            this.joinUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
-            // 
-            // btnClient
-            // 
-            this.btnClient.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnClient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnClient.Font = new System.Drawing.Font("UTM Avo", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient.ForeColor = System.Drawing.Color.Black;
-            this.btnClient.Location = new System.Drawing.Point(28, 224);
-            this.btnClient.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(355, 68);
-            this.btnClient.TabIndex = 3;
-            this.btnClient.Text = "Join a game ";
-            this.btnClient.UseVisualStyleBackColor = false;
-            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
-            // 
-            // btnServer
-            // 
-            this.btnServer.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnServer.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnServer.Font = new System.Drawing.Font("UTM Avo", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServer.ForeColor = System.Drawing.Color.Black;
-            this.btnServer.Location = new System.Drawing.Point(442, 224);
-            this.btnServer.Margin = new System.Windows.Forms.Padding(4);
-            this.btnServer.Name = "btnServer";
-            this.btnServer.Size = new System.Drawing.Size(355, 68);
-            this.btnServer.TabIndex = 5;
-            this.btnServer.Text = "Host a new game";
-            this.btnServer.UseVisualStyleBackColor = false;
-            this.btnServer.Click += new System.EventHandler(this.btnServer_Click);
             // 
             // joinPort
             // 
@@ -82,7 +51,7 @@
             this.joinPort.Name = "joinPort";
             this.joinPort.Size = new System.Drawing.Size(208, 32);
             this.joinPort.TabIndex = 2;
-            this.joinPort.Text = "65535";
+            this.joinPort.Text = "65536";
             this.joinPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // joinIP
@@ -98,17 +67,6 @@
             this.joinIP.Text = "localhost";
             this.joinIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // joinUsername
-            // 
-            this.joinUsername.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.joinUsername.Font = new System.Drawing.Font("Montserrat Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.joinUsername.ForeColor = System.Drawing.Color.Black;
-            this.joinUsername.Location = new System.Drawing.Point(371, 143);
-            this.joinUsername.Margin = new System.Windows.Forms.Padding(4);
-            this.joinUsername.Name = "joinUsername";
-            this.joinUsername.Size = new System.Drawing.Size(268, 34);
-            this.joinUsername.TabIndex = 0;
-            // 
             // hostPort
             // 
             this.hostPort.BackColor = System.Drawing.SystemColors.Control;
@@ -120,18 +78,8 @@
             this.hostPort.Name = "hostPort";
             this.hostPort.Size = new System.Drawing.Size(254, 32);
             this.hostPort.TabIndex = 4;
-            this.hostPort.Text = "65535";
+            this.hostPort.Text = "65536";
             this.hostPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 30);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Enter username:";
             // 
             // label2
             // 
@@ -166,30 +114,89 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("UTM Avo", 22F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(136, 36);
+            this.label5.Font = new System.Drawing.Font("UTM Avo", 25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label5.Location = new System.Drawing.Point(99, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(536, 65);
+            this.label5.Size = new System.Drawing.Size(610, 73);
             this.label5.TabIndex = 11;
             this.label5.Text = "NUMBER MAGIC GAME";
+            // 
+            // btnClient
+            // 
+            this.btnClient.BorderRadius = 25;
+            this.btnClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClient.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnClient.Font = new System.Drawing.Font("UTM Avo", 11F, System.Drawing.FontStyle.Bold);
+            this.btnClient.ForeColor = System.Drawing.Color.White;
+            this.btnClient.Location = new System.Drawing.Point(39, 234);
+            this.btnClient.Name = "btnClient";
+            this.btnClient.Size = new System.Drawing.Size(355, 47);
+            this.btnClient.TabIndex = 12;
+            this.btnClient.Text = "Join a game ";
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
+            // 
+            // btnServer
+            // 
+            this.btnServer.BorderRadius = 25;
+            this.btnServer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnServer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnServer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnServer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnServer.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnServer.Font = new System.Drawing.Font("UTM Avo", 11F, System.Drawing.FontStyle.Bold);
+            this.btnServer.ForeColor = System.Drawing.Color.White;
+            this.btnServer.Location = new System.Drawing.Point(427, 234);
+            this.btnServer.Name = "btnServer";
+            this.btnServer.Size = new System.Drawing.Size(355, 47);
+            this.btnServer.TabIndex = 13;
+            this.btnServer.Text = "Host a new game";
+            this.btnServer.Click += new System.EventHandler(this.btnServer_Click);
+            // 
+            // joinUsername
+            // 
+            this.joinUsername.BorderColor = System.Drawing.Color.Green;
+            this.joinUsername.BorderRadius = 23;
+            this.joinUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.joinUsername.DefaultText = "";
+            this.joinUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.joinUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.joinUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.joinUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.joinUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.joinUsername.Font = new System.Drawing.Font("UTM Avo", 11F);
+            this.joinUsername.ForeColor = System.Drawing.Color.Green;
+            this.joinUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.joinUsername.Location = new System.Drawing.Point(215, 132);
+            this.joinUsername.Margin = new System.Windows.Forms.Padding(6);
+            this.joinUsername.Name = "joinUsername";
+            this.joinUsername.PasswordChar = '\0';
+            this.joinUsername.PlaceholderForeColor = System.Drawing.Color.Green;
+            this.joinUsername.PlaceholderText = "Enter your username";
+            this.joinUsername.SelectedText = "";
+            this.joinUsername.Size = new System.Drawing.Size(375, 49);
+            this.joinUsername.TabIndex = 14;
+            this.joinUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // indexForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(226)))), ((int)(((byte)(167)))));
-            this.ClientSize = new System.Drawing.Size(820, 329);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(820, 322);
+            this.Controls.Add(this.joinUsername);
+            this.Controls.Add(this.btnServer);
+            this.Controls.Add(this.btnClient);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnClient);
             this.Controls.Add(this.hostPort);
-            this.Controls.Add(this.joinUsername);
             this.Controls.Add(this.joinIP);
             this.Controls.Add(this.joinPort);
-            this.Controls.Add(this.btnServer);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -204,17 +211,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnClient;
-        private System.Windows.Forms.Button btnServer;
         private System.Windows.Forms.TextBox joinPort;
         private System.Windows.Forms.TextBox joinIP;
-        private System.Windows.Forms.TextBox joinUsername;
         private System.Windows.Forms.TextBox hostPort;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Button btnClient;
+        private Guna.UI2.WinForms.Guna2Button btnServer;
+        private Guna.UI2.WinForms.Guna2TextBox joinUsername;
     }
 }
